@@ -1,2 +1,2 @@
 # leetcode
-leetcode solution in different language
+leetcode solution
