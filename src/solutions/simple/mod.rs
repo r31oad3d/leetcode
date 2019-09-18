@@ -4,3 +4,6 @@ pub mod is_palindrome;
 pub mod is_power_of_four;
 pub mod reverse;
 pub mod roman_to_int;
+pub mod longest_common_prefix;
+pub mod is_valid;
+pub mod my_sqrt;

@@ -7,6 +7,7 @@ fn simple_test() {
     simple::sorted_squares::test();
     simple::is_palindrome::test();
     simple::is_power_of_four::test();
+    simple::my_sqrt::test();
 }
 
 fn middle_test() {
