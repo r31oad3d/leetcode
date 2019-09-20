@@ -7,3 +7,6 @@ pub mod roman_to_int;
 pub mod longest_common_prefix;
 pub mod is_valid;
 pub mod my_sqrt;
+pub mod plus_one;
+pub mod backspace_compare;
+pub mod to_goat_latin;

@@ -2,6 +2,7 @@ mod solutions;
 
 use solutions::simple;
 use solutions::middle;
+use solutions::hard;
 fn simple_test() {
     simple::twoSum::test();
     simple::sorted_squares::test();
@@ -15,7 +16,7 @@ fn middle_test() {
 }
 
 fn hard_test() {
-
+    hard::num_dup_digits_at_most_n::test();
 }
 
 
