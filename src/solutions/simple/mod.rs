@@ -10,3 +10,7 @@ pub mod my_sqrt;
 pub mod plus_one;
 pub mod backspace_compare;
 pub mod to_goat_latin;
+pub mod max_profit;
+pub mod single_number;
+pub mod is_power_of_two;
+pub mod add_binary;
