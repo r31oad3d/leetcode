@@ -5,3 +5,4 @@ pub mod convert;
 pub mod my_atoi;
 pub mod max_area;
 pub mod generate_parenthesis;
+pub mod permute;
