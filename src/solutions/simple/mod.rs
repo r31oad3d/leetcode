@@ -1,4 +1,4 @@
-pub mod twoSum;
+pub mod two_sum;
 pub mod sorted_squares;
 pub mod is_palindrome;
 pub mod is_power_of_four;
@@ -14,3 +14,4 @@ pub mod max_profit;
 pub mod single_number;
 pub mod is_power_of_two;
 pub mod add_binary;
+pub mod can_win_nim;

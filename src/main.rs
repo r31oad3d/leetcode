@@ -4,7 +4,7 @@ use solutions::simple;
 use solutions::middle;
 use solutions::hard;
 fn simple_test() {
-    simple::twoSum::test();
+    simple::two_sum::test();
     simple::sorted_squares::test();
     simple::is_palindrome::test();
     simple::is_power_of_four::test();
