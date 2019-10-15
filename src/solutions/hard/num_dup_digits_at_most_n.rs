@@ -153,7 +153,7 @@ fn from_n_sized_num_starter_to_num_dup_at_most_adverse(min_value_of_n_size: i32,
         v_num.reverse();
         let max_n_sized_num = 1;
         let mut num_at_previous_position = 0;
-        for num_at_position in v_num.len(){
+        for num_at_position in v_num{
             let mut tmp = num_at_position < num_at_previous_position;
             //max_n_sized_num *= num_at_position < num_at_previous_position
         }

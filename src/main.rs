@@ -13,10 +13,11 @@ fn simple_test() {
 
 fn middle_test() {
     //middle::length_of_longest_substring;
+    middle::three_sum::test();
 }
 
 fn hard_test() {
-    hard::num_dup_digits_at_most_n::test();
+    //hard::num_dup_digits_at_most_n::test();
 }
 
 

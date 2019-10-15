@@ -6,3 +6,6 @@ pub mod my_atoi;
 pub mod max_area;
 pub mod generate_parenthesis;
 pub mod permute;
+pub mod three_sum;
+pub mod frequency_sort;
+pub mod top_k_frequent;
