@@ -9,12 +9,13 @@ fn simple_test() {
 //    simple::is_palindrome::test();
 //    simple::is_power_of_four::test();
 //    simple::my_sqrt::test();
+    simple::self_dividing_numbers::test();
 }
 
 fn middle_test() {
     //middle::length_of_longest_substring;
     //middle::three_sum::test();
-    middle::sort_colors::test();
+    //middle::sort_colors::test();
 }
 
 fn hard_test() {

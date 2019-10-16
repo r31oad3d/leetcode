@@ -21,3 +21,8 @@ pub mod last_stone_weight;
 pub mod lemonade_change;
 pub mod is_perfect_square;
 pub mod first_uniq_char;
+pub mod MyStack;
+pub mod MyQueue;
+pub mod remove_duplicates;
+pub mod remove_element;
+pub mod self_dividing_numbers;
