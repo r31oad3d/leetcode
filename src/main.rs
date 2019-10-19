@@ -9,7 +9,7 @@ fn simple_test() {
 //    simple::is_palindrome::test();
 //    simple::is_power_of_four::test();
 //    simple::my_sqrt::test();
-    simple::self_dividing_numbers::test();
+    simple::construct_rectangle::test();
 }
 
 fn middle_test() {

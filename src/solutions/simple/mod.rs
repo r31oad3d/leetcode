@@ -26,3 +26,4 @@ pub mod MyQueue;
 pub mod remove_duplicates;
 pub mod remove_element;
 pub mod self_dividing_numbers;
+pub mod construct_rectangle;
