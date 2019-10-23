@@ -10,3 +10,4 @@ pub mod three_sum;
 pub mod frequency_sort;
 pub mod top_k_frequent;
 pub mod sort_colors;
+pub mod max_area_of_island;
