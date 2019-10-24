@@ -33,3 +33,4 @@ pub mod island_perimeter;
 pub mod hamming_distance;
 pub mod max_sub_array;
 pub mod majority_element;
+pub mod length_of_last_word;
