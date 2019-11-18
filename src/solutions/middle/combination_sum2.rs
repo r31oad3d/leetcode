@@ -13,7 +13,7 @@ impl Solution {
                     //println!("\trecusrive candidate {:?}", candidate);
                     let mut tmp_candidates = candidates.clone();
                     tmp_candidates.remove(i);
-                    match sub_combination_sum(tmp_candidates.clone(), sub_target - candidate) {
+                    match sub_combination_sum(tmp_candidates.clone(), sub_target - *candidate) {
                         Some(sub_res) => {
                             for mut s_res in sub_res {
                                 s_res.push(*candidate);

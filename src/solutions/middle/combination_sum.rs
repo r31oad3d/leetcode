@@ -11,7 +11,7 @@ impl Solution {
                     res.push(vec![*candidate]);
                 } else if *candidate < sub_target {
                     //println!("\trecusrive candidate {:?}", candidate);
-                    match sub_combination_sum(candidates, sub_target - candidate) {
+                    match sub_combination_sum(candidates, sub_target - *candidate) {
                         Some(sub_res) => {
                             for mut s_res in sub_res {
                                 s_res.push(*candidate);

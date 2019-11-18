@@ -43,3 +43,5 @@ pub mod is_power_of_three;
 pub mod reverse_string;
 pub mod find_max_consecutive_ones;
 pub mod str_str;
+pub mod add_strings;
+pub mod add_to_array_form;
