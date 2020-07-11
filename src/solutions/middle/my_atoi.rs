@@ -14,33 +14,41 @@ impl Solution {
                         break;
                     } else {
                         if have_number {
-                            break
+                            break;
                         } else {
                             positive_negtive = true;
                             res_str.push('+');
                             have_symbol = true;
                         }
                     }
-                },
+                }
                 '-' => {
                     if have_symbol {
                         break;
                     } else {
                         if have_number {
-                            break
+                            break;
                         } else {
                             positive_negtive = false;
                             res_str.push('-');
                             have_symbol = true;
                         }
                     }
-                },
+                }
                 ch if char::is_numeric(ch) => {
                     res_str.push(ch);
                     have_number = true;
-                },
-                ' ' => { if res_str.len() == 0 { continue; } else { break; } }
-                _ => { break; },
+                }
+                ' ' => {
+                    if res_str.len() == 0 {
+                        continue;
+                    } else {
+                        break;
+                    }
+                }
+                _ => {
+                    break;
+                }
             }
         }
         if res_str.len() == 0 {
@@ -54,8 +62,14 @@ impl Solution {
         }
         use std::str::FromStr;
         match i32::from_str(res_str.as_str()) {
-            Ok(res) => { res }
-            Err(_) => { if positive_negtive { i32::max_value() } else { i32::min_value() } }
+            Ok(res) => res,
+            Err(_) => {
+                if positive_negtive {
+                    i32::max_value()
+                } else {
+                    i32::min_value()
+                }
+            }
         }
     }
 }

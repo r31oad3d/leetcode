@@ -8,7 +8,7 @@ impl Solution {
                     continue;
                 }
                 if i + j == target {
-                    return vec![i_i as i32,i_j as i32];
+                    return vec![i_i as i32, i_j as i32];
                 }
             }
         }
@@ -16,7 +16,4 @@ impl Solution {
     }
 }
 
-
-pub fn test() {
-
-}
+pub fn test() {}

@@ -1,6 +1,5 @@
 struct Solution;
 
-
 impl Solution {
     pub fn letter_combinations(digits: String) -> Vec<String> {
         use std::collections::HashMap;
@@ -14,11 +13,11 @@ impl Solution {
             ('8', vec!['t', 'u', 'v']),
             ('9', vec!['w', 'x', 'y', 'z']),
         ]
-            .iter()
-            .cloned()
-            .collect();
+        .iter()
+        .cloned()
+        .collect();
         let digits_v: Vec<char> = digits.chars().collect();
-        fn sub_combinations(mut chars: Vec<char>, map: &HashMap<char, Vec<char>>) -> Vec<String>  {
+        fn sub_combinations(mut chars: Vec<char>, map: &HashMap<char, Vec<char>>) -> Vec<String> {
             if chars.len() == 0 {
                 return vec![];
             }

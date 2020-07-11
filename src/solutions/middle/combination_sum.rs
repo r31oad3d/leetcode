@@ -18,8 +18,10 @@ impl Solution {
                                 //println!("found:{:?}", s_res);
                                 res.push(s_res);
                             }
-                        },
-                        None => {continue;},
+                        }
+                        None => {
+                            continue;
+                        }
                     }
                 }
                 //println!("\tcandidate {:?} is not suitable for target {:?},res:{:?}", candidate, sub_target, res);
@@ -43,10 +45,8 @@ impl Solution {
                     res.push(t.clone());
                 }
                 res
-            },
-            None => {
-                vec![]
-            },
+            }
+            None => vec![],
         }
     }
 }

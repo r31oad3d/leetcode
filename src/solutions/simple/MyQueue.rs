@@ -3,16 +3,16 @@ struct MyQueue {
     elem: VecDeque<i32>,
 }
 
-
 /**
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
 impl MyQueue {
-
     /** Initialize your data structure here. */
     fn new() -> Self {
-        MyQueue{elem: VecDeque::<i32>::new()}
+        MyQueue {
+            elem: VecDeque::<i32>::new(),
+        }
     }
 
     /** Push element x to the back of queue. */
@@ -35,4 +35,3 @@ impl MyQueue {
         self.elem.is_empty()
     }
 }
-

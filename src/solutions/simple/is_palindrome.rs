@@ -20,6 +20,4 @@ impl Solution {
     }
 }
 
-pub fn test() {
-
-}
+pub fn test() {}

@@ -1,6 +1,5 @@
 struct Solution;
 
-
 impl Solution {
     pub fn roman_to_int(s: String) -> i32 {
         //  字符          数值
@@ -24,11 +23,11 @@ impl Solution {
                 'M' => {
                     thousand += 1000;
                     previous = 'M';
-                },
+                }
                 'D' => {
                     hundred += 500;
                     previous = 'D';
-                },
+                }
                 'C' => {
                     if let 'C' = previous {
                         hundred += 100;
@@ -41,11 +40,11 @@ impl Solution {
                         hundred += 100;
                     }
                     previous = 'C';
-                },
+                }
                 'L' => {
                     decade += 50;
                     previous = 'L';
-                },
+                }
                 'X' => {
                     if let 'X' = previous {
                         decade += 10;
@@ -58,11 +57,11 @@ impl Solution {
                         decade += 10;
                     }
                     previous = 'X';
-                },
+                }
                 'V' => {
                     unit += 5;
                     previous = 'V';
-                },
+                }
                 'I' => {
                     if let 'I' = previous {
                         unit += 1;
@@ -75,11 +74,10 @@ impl Solution {
                         unit += 1;
                     }
                     previous = 'I';
-                },
+                }
                 _ => {}
             }
         }
-
 
         thousand + hundred + decade + unit
     }

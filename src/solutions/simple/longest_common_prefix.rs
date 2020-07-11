@@ -15,24 +15,24 @@ impl Solution {
                             cur_loop_c = *c_temp as char;
                             if i == strs.len() - 1 {
                                 res.push(cur_loop_c);
-                                index_in_str +=1;
+                                index_in_str += 1;
                                 continue 'outer;
                             }
                         } else {
-                            if   cur_loop_c  == *c_temp as char {
+                            if cur_loop_c == *c_temp as char {
                                 if i == strs.len() - 1 {
                                     res.push(cur_loop_c);
-                                    index_in_str +=1;
+                                    index_in_str += 1;
                                     continue 'outer;
                                 }
                             } else {
                                 break 'outer;
                             }
                         }
-                    },
+                    }
                     None => {
                         break 'outer;
-                    },
+                    }
                 }
             }
             break;

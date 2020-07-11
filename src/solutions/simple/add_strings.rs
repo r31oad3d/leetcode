@@ -1,6 +1,5 @@
 struct Solution;
 
-
 impl Solution {
     pub fn add_strings(num1: String, num2: String) -> String {
         let mut res = "".to_string();
@@ -29,7 +28,7 @@ impl Solution {
                 '7' => 7,
                 '8' => 8,
                 '9' => 9,
-                _ => {panic!("wtf?")},
+                _ => panic!("wtf?"),
             }
         };
         let transform_i32_char = |i: i32| -> char {
@@ -44,7 +43,7 @@ impl Solution {
                 7 => '7',
                 8 => '8',
                 9 => '9',
-                _ => {panic!("wtf?")},
+                _ => panic!("wtf?"),
             }
         };
         let v_num1: Vec<char> = num1.chars().rev().collect();
@@ -64,9 +63,7 @@ impl Solution {
                     flag = _flag;
                     res.insert(0, transform_i32_char(_res));
                 }
-                _ => {
-                    panic!("wtf?")
-                }
+                _ => panic!("wtf?"),
             }
             i += 1;
         }

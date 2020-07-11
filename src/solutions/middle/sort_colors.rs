@@ -23,7 +23,6 @@ impl Solution {
     }
 }
 
-
 pub fn test() {
     let mut v = vec![2];
     Solution::sort_colors(&mut v);

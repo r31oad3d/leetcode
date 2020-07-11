@@ -4,7 +4,7 @@ impl Solution {
     pub fn combination_sum2(candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
         fn sub_combination_sum(candidates: Vec<i32>, sub_target: i32) -> Option<Vec<Vec<i32>>> {
             let mut res = vec![];
-            for (i,candidate) in candidates.iter().enumerate() {
+            for (i, candidate) in candidates.iter().enumerate() {
                 //println!("target:{:?}, candidate:{:?}", sub_target, candidate );
                 if *candidate == sub_target {
                     //println!("\tpush candidate {:?}", candidate);
@@ -20,8 +20,10 @@ impl Solution {
                                 //println!("found:{:?}", s_res);
                                 res.push(s_res);
                             }
-                        },
-                        None => {continue;},
+                        }
+                        None => {
+                            continue;
+                        }
                     }
                 }
                 //println!("\tcandidate {:?} is not suitable for target {:?},res:{:?}", candidate, sub_target, res);
@@ -45,10 +47,8 @@ impl Solution {
                     res.push(t.clone());
                 }
                 res
-            },
-            None => {
-                vec![]
-            },
+            }
+            None => vec![],
         }
     }
 }

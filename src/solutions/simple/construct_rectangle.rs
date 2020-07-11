@@ -36,7 +36,6 @@ impl Solution {
     }
 }
 
-
 pub fn test() {
     println!("{:?}", Solution::construct_rectangle(40));
 }

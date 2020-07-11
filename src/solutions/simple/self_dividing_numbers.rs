@@ -27,7 +27,6 @@ impl Solution {
     }
 }
 
-
 pub fn test() {
     println!("{:?}", Solution::self_dividing_numbers(1, 22));
 }

@@ -11,10 +11,9 @@ impl Solution {
         //  D             500
         //  M             1000
         let map = [
-            "I", "II", "III", "VI", "V", "IV", "IIV", "IIIV", "XI",
-            "X", "XX", "XXX", "LX", "L", "XL", "XXL", "XXXL", "CX",
-            "C", "CC", "CCC", "DC", "D", "CD", "CCD", "CCCD", "MC",
-            "M", "MM", "MMM",
+            "I", "II", "III", "VI", "V", "IV", "IIV", "IIIV", "XI", "X", "XX", "XXX", "LX", "L",
+            "XL", "XXL", "XXXL", "CX", "C", "CC", "CCC", "DC", "D", "CD", "CCD", "CCCD", "MC", "M",
+            "MM", "MMM",
         ];
         let mut remainder: usize = 0;
         let mut temp = String::new();
@@ -23,12 +22,16 @@ impl Solution {
         let mut factor = 0;
         while num > 0 {
             remainder = num % 10;
-            let index = if remainder == 0 { None } else { Some(factor * 9 + (remainder-1)) };
+            let index = if remainder == 0 {
+                None
+            } else {
+                Some(factor * 9 + (remainder - 1))
+            };
             match index {
-                None => {},
+                None => {}
                 Some(index) => {
                     temp.push_str(map[index]);
-                },
+                }
             };
             factor += 1;
             num = num / 10;

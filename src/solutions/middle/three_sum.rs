@@ -1,5 +1,5 @@
+use std::collections::HashSet;
 struct Solution;
-
 
 impl Solution {
     pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
@@ -31,22 +31,73 @@ impl Solution {
                 }
             }
             let mut flag = false;
-                for index in i..nums.len() {
-                    println!("threesum index: {}", index);
-                    println!("threesum i_tmp: {}, j_tmp: {}, i {}, j {}", i_tmp, j_tmp, nums.get(index).unwrap(), nums.get(index + 1).unwrap());
-                    if nums.get(index).unwrap() != &i_tmp  {
-                        i = i + index;
-                        flag = true;
-                        break;
-                    }
+            for index in i..nums.len() {
+                println!("threesum index: {}", index);
+                println!(
+                    "threesum i_tmp: {}, j_tmp: {}, i {}, j {}",
+                    i_tmp,
+                    j_tmp,
+                    nums.get(index).unwrap(),
+                    nums.get(index + 1).unwrap()
+                );
+                if nums.get(index).unwrap() != &i_tmp {
+                    i = i + index;
+                    flag = true;
+                    break;
                 }
+            }
             if !flag {
                 i = i + 1;
             }
             j = i + 1;
             k = j + 1;
+        }
+        res
+    }
+}
 
+//timeout
+struct Solution1;
+impl Solution1 {
+    pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
+        let mut set = HashSet::new();
+        let mut res = vec![];
+        nums.sort();
+        let (mut start, mut end) = (0, nums.len() - 1);
 
+        while start < nums.len() {
+            //println!("start: {:?}",nums[start]);
+            if nums[start] > 0 {
+                break;
+            }
+
+            while end > start + 1 {
+                //println!("end: {:?}",nums[end]);
+                let v_start = nums[start];
+                let v_end = nums[end];
+                if v_end < 0 {
+                    break;
+                }
+                if set.contains(&vec![v_start, v_end, 0 - v_start - v_end]) {
+                    end -= 1;
+                    continue;
+                }
+                let mut index = start + 1;
+                while index < end {
+                    let v_index = nums[index];
+                    if v_start + v_end + v_index == 0 {
+                        set.insert(vec![v_start, v_end, v_index]);
+                        break;
+                    }
+                    index += 1;
+                }
+                end -= 1;
+            }
+            start += 1;
+            end = nums.len() - 1;
+        }
+        for x in set.iter() {
+            res.push(x.clone());
         }
         res
     }

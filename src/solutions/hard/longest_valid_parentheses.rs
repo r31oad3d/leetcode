@@ -9,7 +9,9 @@ impl Solution {
         stack.push(-1);
         for (i, c) in v.iter().enumerate() {
             match c {
-                '(' => { stack.push(i as i32); },
+                '(' => {
+                    stack.push(i as i32);
+                }
                 ')' => {
                     stack.pop();
                     if stack.is_empty() {
@@ -17,8 +19,8 @@ impl Solution {
                     } else {
                         res = max(res, i as i32 - stack.last().unwrap().clone());
                     }
-                },
-                _ => { panic!("wtf?!") },
+                }
+                _ => panic!("wtf?!"),
             }
         }
         res

@@ -17,7 +17,6 @@ impl Solution {
         candidate
     }
 
-
     pub fn majority_element_v1(nums: Vec<i32>) -> i32 {
         let mut nums = nums;
         nums.sort();

@@ -10,9 +10,12 @@ impl Solution {
                 let new_x = i as i32 + dx[i];
                 let new_y = j as i32 + dy[i];
                 println!("inner: ({},{})", new_x, new_y);
-                if 0 <= new_x && (new_x as usize) < grid.len() &&
-                    0 <= new_y && (new_y as usize) < grid[0].len()
-                    && grid[new_x as usize][new_y as usize] == 1 {
+                if 0 <= new_x
+                    && (new_x as usize) < grid.len()
+                    && 0 <= new_y
+                    && (new_y as usize) < grid[0].len()
+                    && grid[new_x as usize][new_y as usize] == 1
+                {
                     println!("dfs: ({},{})", new_x, new_y);
                     ret += dfs(new_x, new_y, grid);
                 }
@@ -32,7 +35,6 @@ impl Solution {
     }
 }
 
-
 pub fn test() {
     let test = vec![
         vec![0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
@@ -42,16 +44,16 @@ pub fn test() {
         vec![0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0],
         vec![0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
         vec![0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
-        vec![0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]
+        vec![0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
     ];
 
     //println!("{:?}", Solution::max_area_of_island(test));
 
     let test2 = vec![
-        vec![1,1,0,0,0],
-        vec![1,1,0,0,0],
-        vec![0,0,0,1,1],
-        vec![0,0,0,1,1]
+        vec![1, 1, 0, 0, 0],
+        vec![1, 1, 0, 0, 0],
+        vec![0, 0, 0, 1, 1],
+        vec![0, 0, 0, 1, 1],
     ];
     println!("{:?}", Solution::max_area_of_island(test2));
 }

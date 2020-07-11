@@ -9,7 +9,7 @@ impl Solution {
                 let curent = num_clone.remove(i);
                 let tmp = Solution::permute(num_clone);
                 for mut v_internal in tmp {
-                    v_internal.insert(0,curent);
+                    v_internal.insert(0, curent);
                     res.push(v_internal)
                 }
             }

@@ -11,14 +11,14 @@ impl Solution {
             s.push(tmp);
         }
 
-        fn word_transform_step2(s: &mut String){
+        fn word_transform_step2(s: &mut String) {
             // append ma
             s.push_str("ma");
         }
 
-        fn word_transform_step3(s: &mut String, n:usize) {
+        fn word_transform_step3(s: &mut String, n: usize) {
             // append a
-            for i in 0..n+1 {
+            for i in 0..n + 1 {
                 s.push('a');
             }
         }
@@ -31,7 +31,7 @@ impl Solution {
             word_transform_step2(&mut word);
             word_transform_step3(&mut word, index);
             launch = launch + word.as_str();
-            if index != vs.len()-1 {
+            if index != vs.len() - 1 {
                 launch += " ";
             }
         }

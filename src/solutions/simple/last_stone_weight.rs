@@ -8,8 +8,8 @@ impl Solution {
             if stones.len() <= 1 {
                 break;
             }
-            let i = stones.len()-1;
-            let diff = stones[i] - stones[i-1];
+            let i = stones.len() - 1;
+            let diff = stones[i] - stones[i - 1];
             stones.pop();
             stones.pop();
             if diff > 0 {

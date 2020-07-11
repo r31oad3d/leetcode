@@ -8,7 +8,9 @@ impl Solution {
         loop {
             match digits.pop() {
                 Some(mut current) => {
-                    if flag { current += 1 }
+                    if flag {
+                        current += 1
+                    }
                     if current >= 10 {
                         flag = true;
                         current -= 10;
@@ -16,11 +18,13 @@ impl Solution {
                         flag = false;
                     }
                     res.push(current);
-                },
+                }
                 None => {
-                    if flag {res.push(1);}
+                    if flag {
+                        res.push(1);
+                    }
                     break;
-                },
+                }
             }
         }
         res.reverse();

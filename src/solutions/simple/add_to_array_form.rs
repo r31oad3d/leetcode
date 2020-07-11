@@ -1,21 +1,16 @@
 struct Solution;
 
-
 impl Solution {
     pub fn add_to_array_form(mut a: Vec<i32>, k: i32) -> Vec<i32> {
         let mut res = vec![];
         let mut b: Vec<i32> = vec![];
         let mut remainder = k;
         while remainder >= 1 {
-            b.push(remainder%10);
+            b.push(remainder % 10);
             remainder /= 10;
         }
         a.reverse();
-        let size = if a.len() >= b.len() {
-            a.len()
-        } else {
-            b.len()
-        };
+        let size = if a.len() >= b.len() { a.len() } else { b.len() };
         let compute = |n1: i32, n2: i32, flag| -> (i32, i32) {
             let tmp = n1 + n2 + flag;
             if tmp >= 10 {
@@ -38,9 +33,7 @@ impl Solution {
                     flag = _flag;
                     res.insert(0, _res);
                 }
-                _ => {
-                    panic!("wtf?")
-                }
+                _ => panic!("wtf?"),
             }
             i += 1;
         }

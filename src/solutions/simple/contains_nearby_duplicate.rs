@@ -6,10 +6,12 @@ impl Solution {
         let mut i = 0_usize;
         let k = k as usize;
         while let Some(n) = nums.get(i) {
-            if set.contains(n) { return true; }
+            if set.contains(n) {
+                return true;
+            }
             set.insert(n.clone());
             if set.len() > k {
-                set.remove(&nums[i-k]);
+                set.remove(&nums[i - k]);
             }
             i += 1;
         }

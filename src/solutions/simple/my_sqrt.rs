@@ -2,16 +2,16 @@ struct Solution;
 impl Solution {
     pub fn my_sqrt_v1(x: i32) -> i32 {
         let mut x = x as f32;
-        let mut i:i64 = 0;
-        let mut x2:f32 = x * 0.5_f32;
-        let mut y:f32 = x;
+        let mut i: i64 = 0;
+        let mut x2: f32 = x * 0.5_f32;
+        let mut y: f32 = x;
         let threehalfs = 1.5_f32;
 
         unsafe {
             let step1 = &mut y as *mut f32;
             let step2 = step1 as *mut i64;
             i = *step2;
-            i = 0x5f3759df - (i>>1);
+            i = 0x5f3759df - (i >> 1);
             //println!("{}", i);
             let step3 = &mut i as *mut i64;
             let step4 = step3 as *mut f32;
@@ -20,29 +20,31 @@ impl Solution {
         y = y * (threehalfs - (x2 * y * y));
         y = y * (threehalfs - (x2 * y * y));
         y = y * (threehalfs - (x2 * y * y));
-        println!("div: {}", 1.0_f32/y as f32);
-        (1.0_f32/y as f32) as i32
+        println!("div: {}", 1.0_f32 / y as f32);
+        (1.0_f32 / y as f32) as i32
     }
 
     pub fn my_sqrt(x: i32) -> i32 {
-        if x < 0 {panic!("negtive num is not allowed");}
-        if x == 0 {return 0;}
+        if x < 0 {
+            panic!("negtive num is not allowed");
+        }
+        if x == 0 {
+            return 0;
+        }
         let mut x = x as f64;
         let mut cur = 1_f64;
         loop {
             let pre = cur;
             cur = (cur + x / cur) / 2_f64;
-            println!("{},{}", cur, (cur-pre).abs());
-            if (cur-pre).abs() < 1e-8 {
+            println!("{},{}", cur, (cur - pre).abs());
+            if (cur - pre).abs() < 1e-8 {
                 return cur as i32;
             }
         }
     }
-
-
 }
 
-pub fn test () {
+pub fn test() {
     println!("{},{}", 2147395599, Solution::my_sqrt(2147395599));
     //1073697800,1073697800
     //536848900,536848900

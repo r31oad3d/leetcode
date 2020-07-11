@@ -67,16 +67,27 @@ impl Solution {
         } else {
             for cursor in 1..=length - 1 {
                 if cursor == 2 {
-                    println!("{}position,  n{}, got:{}", cursor, n, n_size_num_dup_at_most(cursor, 99));
+                    println!(
+                        "{}position,  n{}, got:{}",
+                        cursor,
+                        n,
+                        n_size_num_dup_at_most(cursor, 99)
+                    );
                     res += n_size_num_dup_at_most(cursor, 99);
                 } else {
-                    println!("{}position,  n{}, got:{}", cursor, n, n_size_num_dup_at_most(cursor, n));
+                    println!(
+                        "{}position,  n{}, got:{}",
+                        cursor,
+                        n,
+                        n_size_num_dup_at_most(cursor, n)
+                    );
                     res += n_size_num_dup_at_most(cursor, n);
                 }
             }
         }
         if remain >= 0 {
-            res += from_n_sized_num_starter_to_num_dup_at_most_adverse( min_value_of_n_size, remain, n);
+            res +=
+                from_n_sized_num_starter_to_num_dup_at_most_adverse(min_value_of_n_size, remain, n);
         } else {
             panic!("wtf?!")
         }
@@ -96,26 +107,23 @@ fn is_sized_of(mut i: i32) -> i32 {
     count
 }
 
-
 fn n_size_num_dup_at_most(n: i32, i: i32) -> i32 {
     //n : 几位数，i: 具体数字
     match n {
-        1 => { 0 }
-        2 => {
-            match i {
-                10 => { 0 }
-                11..=21 => { 1 }
-                22..=32 => { 2 }
-                33..=43 => { 3 }
-                44..=54 => { 4 }
-                55..=65 => { 5 }
-                66..=76 => { 6 }
-                77..=87 => { 7 }
-                88..=98 => { 8 }
-                99 => { 9 }
-                _ => { 0 }
-            }
-        }
+        1 => 0,
+        2 => match i {
+            10 => 0,
+            11..=21 => 1,
+            22..=32 => 2,
+            33..=43 => 3,
+            44..=54 => 4,
+            55..=65 => 5,
+            66..=76 => 6,
+            77..=87 => 7,
+            88..=98 => 8,
+            99 => 9,
+            _ => 0,
+        },
         n => {
             // 三位数以及以上
             let max_n_sized_num = 10_i32.pow(n as u32 - 1) * 9;
@@ -132,8 +140,11 @@ fn n_size_num_dup_at_most(n: i32, i: i32) -> i32 {
     }
 }
 
-
-fn from_n_sized_num_starter_to_num_dup_at_most_adverse(min_value_of_n_size: i32, remain: i32, n: i32 ) -> i32 {
+fn from_n_sized_num_starter_to_num_dup_at_most_adverse(
+    min_value_of_n_size: i32,
+    remain: i32,
+    n: i32,
+) -> i32 {
     //tail
     // 982 -> 1-9 + 10-99 + 100-982
     // 100-982
@@ -143,17 +154,20 @@ fn from_n_sized_num_starter_to_num_dup_at_most_adverse(min_value_of_n_size: i32,
     if remain == 0 {
         return 1;
     } else {
-        println!("tail calculate!, remain is {}, tail is {}-{}", remain,  min_value_of_n_size, n);
-        let mut v_num:Vec<i32> = Vec::new();
+        println!(
+            "tail calculate!, remain is {}, tail is {}-{}",
+            remain, min_value_of_n_size, n
+        );
+        let mut v_num: Vec<i32> = Vec::new();
         let mut i = n;
         while i != 0 {
-            v_num.push(i%10);
+            v_num.push(i % 10);
             i /= 10;
         }
         v_num.reverse();
         let max_n_sized_num = 1;
         let mut num_at_previous_position = 0;
-        for num_at_position in v_num{
+        for num_at_position in v_num {
             let mut tmp = num_at_position < num_at_previous_position;
             //max_n_sized_num *= num_at_position < num_at_previous_position
         }
@@ -171,10 +185,10 @@ pub fn test() {
     println!("1000!!! {}", Solution::num_dup_digits_at_most_n(1000));
     println!("1001!!! {}", Solution::num_dup_digits_at_most_n(1001));
 
-    let mut v_num:Vec<i32> = Vec::new();
+    let mut v_num: Vec<i32> = Vec::new();
     let mut i = 987;
     while i != 0 {
-        v_num.push(i%10);
+        v_num.push(i % 10);
         i /= 10;
     }
     v_num.reverse();

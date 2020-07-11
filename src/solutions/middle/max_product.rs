@@ -1,6 +1,5 @@
 struct Solution;
 
-
 impl Solution {
     pub fn max_product(words: Vec<String>) -> i32 {
         let mut res = 0_i32;

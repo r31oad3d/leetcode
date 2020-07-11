@@ -1,6 +1,5 @@
 struct Solution;
 
-
 impl Solution {
     pub fn island_perimeter(grid: Vec<Vec<i32>>) -> i32 {
         let (mut one_num, mut unavailable_num) = (0_i32, 0_i32);
@@ -36,8 +35,8 @@ impl Solution {
                 } else if status == -2 {
                     break 'inner;
                 } else if status == 1 {
-                    let mut down = checker(i_index +1, j_index);
-                    let mut right = checker(i_index, j_index+1);
+                    let mut down = checker(i_index + 1, j_index);
+                    let mut right = checker(i_index, j_index + 1);
                     if down < 0 {
                         down = 0
                     }

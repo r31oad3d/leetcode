@@ -1,6 +1,5 @@
 struct Solution;
 
-
 impl Solution {
     pub fn get_hint(secret: String, guess: String) -> String {
         let v_secret: Vec<char> = secret.chars().collect();

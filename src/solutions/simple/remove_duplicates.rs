@@ -2,10 +2,10 @@ struct Solution;
 
 impl Solution {
     pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
-        if nums.len() == 0{
+        if nums.len() == 0 {
             return 0_i32;
         }
-        if nums.len() == 1{
+        if nums.len() == 1 {
             return 1_i32;
         }
         let (mut i, mut j) = (0_usize, 1_usize);
@@ -15,12 +15,12 @@ impl Solution {
             if i_value == j_value {
                 j += 1;
             } else if j_value > i_value {
-                if j == i + 1{
+                if j == i + 1 {
                     i += 1;
                     j += 1;
                 } else {
                     i += 1;
-                    nums.swap(i,j);
+                    nums.swap(i, j);
                     j += 1;
                 }
             }
@@ -28,6 +28,6 @@ impl Solution {
                 break;
             }
         }
-        (i+1) as i32
+        (i + 1) as i32
     }
 }

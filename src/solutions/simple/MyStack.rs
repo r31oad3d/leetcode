@@ -2,16 +2,16 @@ struct MyStack {
     elem: Vec<i32>,
 }
 
-
 /**
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
 impl MyStack {
-
     /** Initialize your data structure here. */
     fn new() -> Self {
-        MyStack{elem: Vec::<i32>::new()}
+        MyStack {
+            elem: Vec::<i32>::new(),
+        }
     }
 
     /** Push element x onto stack. */
@@ -34,4 +34,3 @@ impl MyStack {
         self.elem.is_empty()
     }
 }
-
