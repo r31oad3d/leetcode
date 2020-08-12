@@ -2,7 +2,8 @@ struct Solution;
 
 impl Solution {
     pub fn max_area(height: Vec<i32>) -> i32 {
-        let compute_area = |min_height: i32, step: i32| -> i32 { min_height * step };
+        let compute_area =
+            |min_height: i32, step: i32| -> i32 { min_height * step };
         let min_value = |a: i32, b: i32| -> i32 {
             if a > b {
                 b
@@ -15,7 +16,10 @@ impl Solution {
             let mut j = i + 1;
             while let Some(&j_value) = height.get(j) {
                 if let Some(&i_value) = height.get(i) {
-                    let temp = compute_area(min_value(i_value, j_value), (j - i) as i32);
+                    let temp = compute_area(
+                        min_value(i_value, j_value),
+                        (j - i) as i32,
+                    );
                     if temp > max_area {
                         max_area = temp
                     }
@@ -27,7 +31,8 @@ impl Solution {
     }
 
     pub fn max_area_slow(height: Vec<i32>) -> i32 {
-        let compute_area = |min_height: i32, step: i32| -> i32 { min_height * step };
+        let compute_area =
+            |min_height: i32, step: i32| -> i32 { min_height * step };
         let min_value = |a: i32, b: i32| -> i32 {
             if a > b {
                 b
@@ -41,7 +46,8 @@ impl Solution {
         while (i < j) {
             i_value = *height.get(i).unwrap();
             j_value = *height.get(j).unwrap();
-            let temp = compute_area(min_value(i_value, j_value), (j - i) as i32);
+            let temp =
+                compute_area(min_value(i_value, j_value), (j - i) as i32);
             if temp > max_area {
                 max_area = temp
             }

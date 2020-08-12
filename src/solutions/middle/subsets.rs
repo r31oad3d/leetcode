@@ -31,12 +31,15 @@ impl Solution {
         } else {
             let temp_value = nums[0];
             let mut temp_res = Solution::subsets(nums[1..].to_vec());
-            let res  = temp_res.iter().map(| v| {
-                let mut v_temp = v.clone();
-                v_temp.push(temp_value);
-                return v_temp;
-            }).collect::<Vec<Vec<i32>>>();
-            return res ;
+            let res = temp_res
+                .iter()
+                .map(|v| {
+                    let mut v_temp = v.clone();
+                    v_temp.push(temp_value);
+                    return v_temp;
+                })
+                .collect::<Vec<Vec<i32>>>();
+            return res;
         }
     }
 }

@@ -53,13 +53,17 @@ impl Solution {
         while i < size {
             match (v_num1.get(i), v_num2.get(i)) {
                 (Some(n1), Some(n2)) => {
-                    let (_res, _flag) =
-                        compute(transform_char_i32(*n1), transform_char_i32(*n2), flag);
+                    let (_res, _flag) = compute(
+                        transform_char_i32(*n1),
+                        transform_char_i32(*n2),
+                        flag,
+                    );
                     flag = _flag;
                     res.insert(0, transform_i32_char(_res));
                 }
                 (None, Some(n)) | (Some(n), None) => {
-                    let (_res, _flag) = compute(transform_char_i32(*n), 0, flag);
+                    let (_res, _flag) =
+                        compute(transform_char_i32(*n), 0, flag);
                     flag = _flag;
                     res.insert(0, transform_i32_char(_res));
                 }

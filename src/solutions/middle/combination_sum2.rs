@@ -1,8 +1,14 @@
 struct Solution;
 //TODO improve
 impl Solution {
-    pub fn combination_sum2(candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
-        fn sub_combination_sum(candidates: Vec<i32>, sub_target: i32) -> Option<Vec<Vec<i32>>> {
+    pub fn combination_sum2(
+        candidates: Vec<i32>,
+        target: i32,
+    ) -> Vec<Vec<i32>> {
+        fn sub_combination_sum(
+            candidates: Vec<i32>,
+            sub_target: i32,
+        ) -> Option<Vec<Vec<i32>>> {
             let mut res = vec![];
             for (i, candidate) in candidates.iter().enumerate() {
                 //println!("target:{:?}, candidate:{:?}", sub_target, candidate );
@@ -13,7 +19,10 @@ impl Solution {
                     //println!("\trecusrive candidate {:?}", candidate);
                     let mut tmp_candidates = candidates.clone();
                     tmp_candidates.remove(i);
-                    match sub_combination_sum(tmp_candidates.clone(), sub_target - *candidate) {
+                    match sub_combination_sum(
+                        tmp_candidates.clone(),
+                        sub_target - *candidate,
+                    ) {
                         Some(sub_res) => {
                             for mut s_res in sub_res {
                                 s_res.push(*candidate);

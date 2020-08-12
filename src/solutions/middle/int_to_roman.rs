@@ -11,9 +11,9 @@ impl Solution {
         //  D             500
         //  M             1000
         let map = [
-            "I", "II", "III", "VI", "V", "IV", "IIV", "IIIV", "XI", "X", "XX", "XXX", "LX", "L",
-            "XL", "XXL", "XXXL", "CX", "C", "CC", "CCC", "DC", "D", "CD", "CCD", "CCCD", "MC", "M",
-            "MM", "MMM",
+            "I", "II", "III", "VI", "V", "IV", "IIV", "IIIV", "XI", "X", "XX",
+            "XXX", "LX", "L", "XL", "XXL", "XXXL", "CX", "C", "CC", "CCC",
+            "DC", "D", "CD", "CCD", "CCCD", "MC", "M", "MM", "MMM",
         ];
         let mut remainder: usize = 0;
         let mut temp = String::new();

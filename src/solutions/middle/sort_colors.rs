@@ -2,7 +2,8 @@ struct Solution;
 
 impl Solution {
     pub fn sort_colors(nums: &mut Vec<i32>) {
-        let (mut front, mut end, mut middle) = (0_usize, nums.len() - 1, 0_usize);
+        let (mut front, mut end, mut middle) =
+            (0_usize, nums.len() - 1, 0_usize);
         while middle <= end {
             println!("front:{}, middle:{}, end:{}", front, middle, end);
             let mut middle_value = nums[middle];

@@ -27,7 +27,8 @@ impl Solution {
             for j in 0..grid[0].len() {
                 if grid[i][j] == 1 {
                     println!("({},{})", i, j);
-                    area = std::cmp::max(area, dfs(i as i32, j as i32, &mut grid));
+                    area =
+                        std::cmp::max(area, dfs(i as i32, j as i32, &mut grid));
                 }
             }
         }

@@ -10,7 +10,12 @@ impl Solution {
             while c < n {
                 for left in Solution::generate_parenthesis(c) {
                     for right in Solution::generate_parenthesis(n - 1 - c) {
-                        res.push("(".to_owned() + left.as_str() + ")" + right.as_str());
+                        res.push(
+                            "(".to_owned()
+                                + left.as_str()
+                                + ")"
+                                + right.as_str(),
+                        );
                     }
                 }
                 c += 1;

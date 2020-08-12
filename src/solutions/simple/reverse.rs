@@ -13,7 +13,8 @@ impl Solution {
                 }
             },
         };
-        if result > i32::max_value() as i64 || result < i32::min_value() as i64 {
+        if result > i32::max_value() as i64 || result < i32::min_value() as i64
+        {
             0 as i32
         } else {
             result as i32

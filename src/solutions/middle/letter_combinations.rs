@@ -17,7 +17,10 @@ impl Solution {
         .cloned()
         .collect();
         let digits_v: Vec<char> = digits.chars().collect();
-        fn sub_combinations(mut chars: Vec<char>, map: &HashMap<char, Vec<char>>) -> Vec<String> {
+        fn sub_combinations(
+            mut chars: Vec<char>,
+            map: &HashMap<char, Vec<char>>,
+        ) -> Vec<String> {
             if chars.len() == 0 {
                 return vec![];
             }

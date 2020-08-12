@@ -3,7 +3,8 @@ struct Solution;
 impl Solution {
     pub fn max_product(words: Vec<String>) -> i32 {
         let mut res = 0_i32;
-        let v_words: Vec<Vec<char>> = words.iter().map(|s| s.chars().collect()).collect();
+        let v_words: Vec<Vec<char>> =
+            words.iter().map(|s| s.chars().collect()).collect();
         let check_have = |s1: &Vec<char>, s2: &Vec<char>| -> bool {
             for c in s1 {
                 if s2.contains(c) {

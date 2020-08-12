@@ -17,7 +17,8 @@ impl Solution {
                     if stack.is_empty() {
                         stack.push(i as i32);
                     } else {
-                        res = max(res, i as i32 - stack.last().unwrap().clone());
+                        res =
+                            max(res, i as i32 - stack.last().unwrap().clone());
                     }
                 }
                 _ => panic!("wtf?!"),

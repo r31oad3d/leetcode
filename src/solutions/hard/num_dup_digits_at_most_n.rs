@@ -86,8 +86,11 @@ impl Solution {
             }
         }
         if remain >= 0 {
-            res +=
-                from_n_sized_num_starter_to_num_dup_at_most_adverse(min_value_of_n_size, remain, n);
+            res += from_n_sized_num_starter_to_num_dup_at_most_adverse(
+                min_value_of_n_size,
+                remain,
+                n,
+            );
         } else {
             panic!("wtf?!")
         }
