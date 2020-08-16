@@ -12,27 +12,23 @@ impl Solution {
                 '+' => {
                     if have_symbol {
                         break;
+                    } else if have_number {
+                        break;
                     } else {
-                        if have_number {
-                            break;
-                        } else {
-                            positive_negtive = true;
-                            res_str.push('+');
-                            have_symbol = true;
-                        }
+                        positive_negtive = true;
+                        res_str.push('+');
+                        have_symbol = true;
                     }
                 }
                 '-' => {
                     if have_symbol {
                         break;
+                    } else if have_number {
+                        break;
                     } else {
-                        if have_number {
-                            break;
-                        } else {
-                            positive_negtive = false;
-                            res_str.push('-');
-                            have_symbol = true;
-                        }
+                        positive_negtive = false;
+                        res_str.push('-');
+                        have_symbol = true;
                     }
                 }
                 ch if char::is_numeric(ch) => {
@@ -40,7 +36,7 @@ impl Solution {
                     have_number = true;
                 }
                 ' ' => {
-                    if res_str.len() == 0 {
+                    if res_str.is_empty() {
                         continue;
                     } else {
                         break;
@@ -51,14 +47,12 @@ impl Solution {
                 }
             }
         }
-        if res_str.len() == 0 {
+        if res_str.is_empty() {
             return 0;
-        } else {
-            if res_str.as_str().eq("+") {
-                return 0;
-            } else if res_str.as_str().eq("-") {
-                return 0;
-            };
+        } else if res_str.as_str().eq("+") {
+            return 0;
+        } else if res_str.as_str().eq("-") {
+            return 0;
         }
         use std::str::FromStr;
         match i32::from_str(res_str.as_str()) {

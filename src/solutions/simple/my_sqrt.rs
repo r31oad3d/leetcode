@@ -1,9 +1,9 @@
 struct Solution;
 impl Solution {
     pub fn my_sqrt_v1(x: i32) -> i32 {
-        let mut x = x as f32;
+        let x = x as f32;
         let mut i: i64 = 0;
-        let mut x2: f32 = x * 0.5_f32;
+        let x2: f32 = x * 0.5_f32;
         let mut y: f32 = x;
         let threehalfs = 1.5_f32;
 
@@ -31,7 +31,7 @@ impl Solution {
         if x == 0 {
             return 0;
         }
-        let mut x = x as f64;
+        let x = x as f64;
         let mut cur = 1_f64;
         loop {
             let pre = cur;
