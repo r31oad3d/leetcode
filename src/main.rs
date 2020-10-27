@@ -10,7 +10,6 @@ fn simple_test() {
     //    simple::is_power_of_four::test();
     //    simple::my_sqrt::test();
     //    simple::construct_rectangle::test();
-    simple::generate::
 }
 
 fn middle_test() {
