@@ -45,3 +45,4 @@ pub mod to_goat_latin;
 pub mod two_city_sched_cost;
 pub mod two_sum;
 pub mod unique_occurrences;
+pub mod generate;

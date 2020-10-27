@@ -10,6 +10,7 @@ fn simple_test() {
     //    simple::is_power_of_four::test();
     //    simple::my_sqrt::test();
     //    simple::construct_rectangle::test();
+    simple::generate::
 }
 
 fn middle_test() {
@@ -17,7 +18,6 @@ fn middle_test() {
     //middle::three_sum::test();
     //middle::sort_colors::test();
     //middle::max_area_of_island::test();
-    middle::subsets::test();
 }
 
 fn hard_test() {
