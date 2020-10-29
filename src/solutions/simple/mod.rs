@@ -13,6 +13,7 @@ pub mod delete_duplicates;
 pub mod exchange;
 pub mod find_content_children;
 pub mod find_max_consecutive_ones;
+pub mod find_repeat_number;
 pub mod first_uniq_char;
 pub mod generate;
 pub mod get_hint;

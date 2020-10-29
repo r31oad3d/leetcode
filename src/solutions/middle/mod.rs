@@ -8,6 +8,7 @@ pub mod generate_parenthesis;
 pub mod int_to_roman;
 pub mod integer_break;
 pub mod length_of_longest_substring;
+pub mod letter_case_permutation;
 pub mod letter_combinations;
 pub mod max_area;
 pub mod max_area_of_island;
