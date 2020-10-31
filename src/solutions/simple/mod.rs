@@ -38,6 +38,7 @@ pub mod my_sqrt;
 pub mod plus_one;
 pub mod remove_duplicates;
 pub mod remove_element;
+pub mod repeated_n_times;
 pub mod reverse;
 pub mod reverse_string;
 pub mod roman_to_int;

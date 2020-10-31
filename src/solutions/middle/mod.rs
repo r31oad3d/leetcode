@@ -13,6 +13,7 @@ pub mod letter_combinations;
 pub mod max_area;
 pub mod max_area_of_island;
 pub mod max_product;
+pub mod max_width_ramp;
 pub mod my_atoi;
 pub mod permute;
 pub mod range_bitwise_and;
